@@ -1,0 +1,572 @@
+\00\00\00\00 is 0 0		\00 is 0 0
+
+
+
+\00\00\00\00 is 0 0    \00 is 0 0
+ is 1 1
+ is 2 2
+ is 3 3
+ is 4 4
+ is 5 5
+ is 6 6
+ is 7 7
+ is 8 8
+	 is 9 9
+
+ is 10 a
+ is 11 b
+ is 12 c
+
+ is 13 d
+ is 14 e
+ is 15 f
+ is 16 10
+ is 17 11
+ is 18 12
+ is 19 13
+ is 20 14
+ is 21 15
+ is 22 16
+ is 23 17
+ is 24 18
+ is 25 19
+ is 26 1a
+ is 27 1b
+ is 28 1c
+ is 29 1d
+ is 30 1e
+ is 31 1f
+  is 32 20
+! is 33 21
+" is 34 22
+# is 35 23
+$ is 36 24
+% is 37 25
+& is 38 26
+' is 39 27
+( is 40 28
+) is 41 29
+* is 42 2a
++ is 43 2b
+, is 44 2c
+- is 45 2d
+. is 46 2e
+/ is 47 2f
+0 is 48 30
+1 is 49 31
+2 is 50 32
+3 is 51 33
+4 is 52 34
+5 is 53 35
+6 is 54 36
+7 is 55 37
+8 is 56 38
+9 is 57 39
+: is 58 3a
+; is 59 3b
+< is 60 3c
+= is 61 3d
+> is 62 3e
+? is 63 3f
+@ is 64 40
+A is 65 41
+B is 66 42
+C is 67 43
+D is 68 44
+E is 69 45
+F is 70 46
+G is 71 47
+H is 72 48
+I is 73 49
+J is 74 4a
+K is 75 4b
+L is 76 4c
+M is 77 4d
+N is 78 4e
+O is 79 4f
+P is 80 50
+Q is 81 51
+R is 82 52
+S is 83 53
+T is 84 54
+U is 85 55
+V is 86 56
+W is 87 57
+X is 88 58
+Y is 89 59
+Z is 90 5a
+[ is 91 5b
+\ is 92 5c
+] is 93 5d
+^ is 94 5e
+_ is 95 5f
+` is 96 60
+a is 97 61
+b is 98 62
+c is 99 63
+d is 100 64
+e is 101 65
+f is 102 66
+g is 103 67
+h is 104 68
+i is 105 69
+j is 106 6a
+k is 107 6b
+l is 108 6c
+m is 109 6d
+n is 110 6e
+o is 111 6f
+p is 112 70
+q is 113 71
+r is 114 72
+s is 115 73
+t is 116 74
+u is 117 75
+v is 118 76
+w is 119 77
+x is 120 78
+y is 121 79
+z is 122 7a
+{ is 123 7b
+| is 124 7c
+} is 125 7d
+~ is 126 7e
+ is 127 7f
+
+
+
+UCAR
+NCAR
+CISL
+Download
+Citing NCL
+Contributors
+UPDATED LETTER TO NCL USERS
+NCL
+Examples
+Functions
+Resources
+Popular Links
+What's New
+Support
+External
+
+Search
+NCL Home> Application examples> File IO || Data files for some examples
+Example pages containing: tips | resources | functions/procedures
+NCL: Reading ASCII data
+This document shows how to read various types of ASCII files using NCL.
+For examples of reading or writing other types of ASCII files, see:
+
+Reading CSV files
+Writing ASCII files
+Writing CSV files
+Here are a list of functions that are useful for reading various types of ASCII files:
+
+asciiread - reads a file that contains ASCII representations of basic data types.
+str_fields_count - Count the number of fields in a string, given a delimiter.
+str_get_cols - Retrieve a particular column in a string, given a start and end index.
+str_get_field - Retrieve a particular field in a string, given a delimiter.
+str_split_csv - Splits strings into an array of strings based on a single delimiter.
+str_sub_str - Replace a substring with another substring.
+readAsciiHead - reads an ASCII file and returns just the header.
+numAsciiCol - returns the number of columns in an ASCII file.
+numAsciiRow - returns the number of rows in an ASCII file.
+Unix "cut" command - allows you easily extract sections from a file.
+Here are the various ASCII files used by the examples on this page.
+asc1.txt - a very simple file with 14 integers, one per line. (example)
+
+asc2.txt - a file with a header line, followed by 2 columns of integer and floating point data. (example)
+
+asc3.txt - a file with several columns of integer, float, and string data. (example)
+
+asc4.txt - a file containing population of cities, with some header and footer lines, and a mix of numeric data. The headers contain some numbers, and some of the numeric data contain commas. The columns are separated by tabs. (example)
+
+asc5.txt - a file where the first row contains the name of each field separated by a delimiter, and the rest of the file contains the values of each field separated by the same delimiter. (example)
+
+string1.txt - a file containing lines of a poem (no numeric data). (example)
+
+pw.dat - a file with a header and four columns of lined-up numeric and non-numeric data. The "ID" column is non-numeric, but it does contain numbers as part of the the ID names. (example)
+
+asc6.txt - a file with a header, and three columns of floating point data (lat, lon, temp). (example)
+
+stn_latlon.dat - a file with 980 rows and 10 columns of floating point data. (example)
+
+istasyontablosu_son.txt - a mix of numeric and non-numeric data in columns that are not lined up nicely. (example)
+
+cygnss_test.txt - a file with an indeterminant number of headers that start with "%", followed by a single number containing a row count, followed by that many rows of data with 9 columns each. (example)
+
+L3_aiavg_n7t_197901.txt - a file with a mix of text, integers, and floats and no delimiters. (example)
+
+NCDC.Central_Iowa.1895-2016.txt - a file with a mix of text, integers, and floats and no delimiters. This file was downloaded from the National Centers for Environmental Information (NCEI) which was previously known as the National Climatic Data Center (NCDC). Specifically, this file was downloaded via the Climate data division selection tool. (example)
+
+reading multiple ASCII files into one NCL variable
+
+asc1.txt - a file with 14 integers, one per line.
+; Read data into a one-dimensional int array of length 14:
+  data = asciiread("asc1.txt",14,"integer")
+
+  npts = dimsizes(data)   ; should be 14
+
+  print(data)     ; Print the values
+If you don't know how many data values you have, you can use the special "-1" value for the dimension size. When you use -1, data values will be read from left-to-right, top-to-bottom, into a 1D array, until there are no values left.
+; Read data into a one-dimensional array of unknown length:
+  data = asciiread("asc1.txt",-1,"integer")
+
+  npts = dimsizes(data)   ; should be 14
+string1.txt - a file with no numerical data, just lines from a poem.
+Use the special -1 value again, and a type of "string" to read in each line. When you read strings, each line in the file will be considered one string, regardless if it contains spaces, tabs, or any other kind of white space.
+
+; Read poem into a one-dimensional string array of unknown length:
+  filename = "string1.txt"
+  poem     = asciiread(filename,-1,"string")
+  nlines   = dimsizes(poem)
+
+  print("The poem in '" + filename + "' has " + nlines + " lines.")
+  print("This includes the title and the author.")
+  print(poem)    ; Print the lines
+asc2.txt - a file with a header line, followed by 2 columns of integer and floating point data.
+Even though this file contains multiple columns of data, when you use the special "-1" value as a dimension size, the values will be read into a one-dimensional array. The values will be read from from top to bottom, left to right.
+
+In this file, the header line will be ignored because it doesn't contain any numerical data.
+
+  data = asciiread("asc2.txt",-1,"float")
+  print(data)     ; Print the values
+To read this data into a 2D array dimensioned 17 x 2 (17 rows by 2 columns), use:
+  data = asciiread("asc2.txt",(/17,2/),"float")
+  print(data)     ; Print the values
+stn_latlon.dat - a file with 980 rows and 10 columns of floating point data.
+The first two methods show how to read this file if you know the exact number of rows and columns, and the third method shows how to read this file if you don't.
+
+Method 1
+
+; Read data into a 980 x 10 float array.
+  nrows = 980
+  ncols = 10
+  data  = asciiread("stn_latlon.dat",(/nrows,ncols/),"float")
+  printVarSummary(data)           ; Print information about file only.
+
+; Two ways to print the data.
+  print(data)                     ; Print data, one value per line
+  write_matrix(data,ncols + "f7.2",0)   ; Formatted output
+Method 2
+This file is actually a file of latitude and longitude values, each dimensioned 70 x 70. The latitude values are written first on the file, followed by the longitude values. Given this information, here's another way to read in this file:
+
+  nlat     = 70
+  nlon     = 70
+  latlon2d = asciiread("stn_latlon.dat",(/2,nlat,nlon/),"float")     ; 2 x 70 x 70
+  lat2d    = latlon2d(0,:,:)    ; 70 x 70
+  lon2d    = latlon2d(1,:,:)    ; 70 x 70
+Method 3
+
+Use the special contributed functions numAsciiCol and readAsciiTable function to first calculate the number of columns, and then to read the data into an array dimensioned nrows x ncols.
+
+load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl" ; This library is automatically loaded
+                                                            ; from NCL V6.2.0 onward.
+                                                            ; No need for user to explicitly load.
+
+  filename = "stn_latlon.dat"
+
+; Calculate the number of columns.
+  ncols = numAsciiCol(filename)
+
+; Given the # of columns, we can use readAsciiTable to read this file.
+  data = readAsciiTable(filename,ncols,"float",0)
+
+  nrows = dimsizes(data(:,0))    ; calculate # of rows
+
+  print("'" + filename + "' has " + nrows + " rows and " + ncols + \
+        " columns of data.")
+pw.dat - a file with a header line and four columns of lined-up numeric and non-numeric data. The "ID" column is non-numeric, but it does contain numbers as part of the the ID names.
+We need to parse out this first column so these numeric values don't get mixed in with our real data.
+
+Note that as of version 5.1.1, this kind of thing is much easier using the str_get_field function, which we'll demonstrate first.
+
+New method, version 5.1.1 and later
+
+; Read data into a big 1D string array
+  fname = "Data/asc/pw.dat"
+  data  = asciiread(fname,-1,"string")
+
+; Count the number of fields, just to show it can be done.
+  nfields = str_fields_count(data(1)," ")
+  print("number of fields = " + nfields)
+
+;
+; Skip first row of "data" because it's just a header line.
+;
+; Use a space (" ") as a delimiter in str_get_field. The first
+; field is field=1 (unlike str_get_cols, in which the first column
+; is column=0).
+;
+  lat = stringtofloat(str_get_field(data(1::), 2," "))
+  lon = stringtofloat(str_get_field(data(1::), 3," "))
+  pwv = stringtofloat(str_get_field(data(1::), 4," "))
+Old method, before version 5.1.1 The following example will only work if your columns are lined up nicely.
+
+; Read data into a big 1D string array, and convert to a character array.
+  data = asciiread("./pw.dat", -1, "string")
+  cdata = stringtochar(data)
+;
+; The first row is just a header, so we can discard this.
+; The data starts in the second row, which is represented
+; by index 1.
+;
+; The latitude values fall in columns 6-12 (indices 7:13)
+; The longitude values fall in columns 13-21 (indices 14:22)
+; The pwv data values fall in columns 22-31 (indices 23:end)
+;
+; The "1:,"means start with the second row, and include all
+; values to the end.
+;
+  lat = stringtofloat(charactertostring(cdata(1:,7:13)))
+  lon = stringtofloat(charactertostring(cdata(1:,14:22)))
+  pwv  = stringtofloat(charactertostring(cdata(1:,23:)))
+This file can also be read by using a combination of the NCL systemfunc function, and the Unix "cut" command. Again, however, the data must be lined up nicely. With "cut", the first character is considered to be column 1 (and not 0).
+Another old method, before version 5.1.1
+
+  fname = "pw.dat"
+  clat  = systemfunc("cut -c7-13 " + fname)
+  clon  = systemfunc("cut -c14-22 " + fname)
+  cpw   = systemfunc("cut -c23-31 " + fname)
+
+; Ignore the first value, since this is just a header.
+  lat = stringtofloat(clat(1:))
+  lon = stringtofloat(clon(1:))
+  pwv = stringtofloat(cpw(1:))
+asc3.txt - a file with several columns of integer, float, and string data.
+The first column contains date values like "200306130209", which we want to parse into separate year, month, day, hour, and minute arrays. We also want to read the third-from-the-last column, which are the station names. We will again use the Unix "cut" command in order to do this kind of parsing.
+
+Note that as of version 5.1.1, this kind of thing is much easier using the str_get_cols function, which we'll demonstrate first.
+
+New method, version 5.1.1 and later
+
+  fname  = "asc3.txt"
+  data   = asciiread(fname,-1,"string")
+  year   = stringtofloat(str_get_cols(data, 1,4))
+  month  = stringtofloat(str_get_cols(data,5,6))
+  day    = stringtofloat(str_get_cols(data,7,8))
+  hour   = stringtofloat(str_get_cols(data,9,10))
+  minute = stringtofloat(str_get_cols(data,11,12))
+  sta    = str_get_cols(data,100,102)
+
+Old method, before version 5.1.1
+
+  fname = "asc3.txt"
+  year   = stringtofloat(systemfunc("cut -c1-4 " + fname))
+  month  = stringtofloat(systemfunc("cut -c5-6 " + fname))
+  day    = stringtofloat(systemfunc("cut -c7-8 " + fname))
+  hour   = stringtofloat(systemfunc("cut -c9-10 " + fname))
+  minute = stringtofloat(systemfunc("cut -c11-12 " + fname))
+  sta    = systemfunc("cut -c100-102 " + fname)
+Note: you cannot use stringtointeger to convert numbers like "09" to "9", because the preceding "0" causes NCL to treat the number as an octal value and "9" is not a valid octal value.
+istasyontablosu_son.txt - a mix of numeric and non-numeric data in columns that are not lined up nicely.
+This file is pretty easy to read, because the non-numeric columns don't have a mix of alpha and numeric characters. Here's a script to read the first, fifth, and sixth columns (latitude, longitude, and station numbers) into separate variables:
+
+  stationfile="istasyontablosu_son.txt"
+
+; Read all data into a one-dimensional variable.
+  dummy = asciiread(stationfile,-1,"float")
+
+  ncol  = 6                                ; # of columns
+  npts  = dimsizes(dummy)/ncol             ; # of points
+
+  stationdata = onedtond(dummy,(/npts,ncol/)) ; npts x ncol
+
+  stn = stationdata(:,0)     ; station numbers
+  lat = stationdata(:,4)     ; latitude values
+  lon = stationdata(:,5)     ; longitude values
+
+; Print the mins/maxs just to verify the data looks correct.
+  print("min/max stn = " + min(stn) + "/" + max(stn))
+  print("min/max lat = " + min(lat) + "/" + max(lat))
+  print("min/max lon = " + min(lon) + "/" + max(lon))
+As of version 5.1.1, you can read fields from this file using str_get_field.
+
+; Read all data into a one-dimensional variable.
+  stationfile = "istasyontablosu_son.txt"
+  data        = asciiread(stationfile,-1,"string")
+
+; Count the number of fields, just to show it can be done.
+  nfields = str_fields_count(data(0)," ")
+  print("number of fields = " + nfields)
+
+
+  stn = stringtofloat(str_get_field(data,1," ")))     ; station numbers
+  lat = stringtofloat(str_get_field(data,6," "))     ; latitude values
+  lon = stringtofloat(str_get_field(data,7," "))     ; longitude values
+
+; Print the mins/maxs just to verify the data looks correct.
+  print("min/max stn = " + min(stn) + "/" + max(stn))
+  print("min/max lat = " + min(lat) + "/" + max(lat))
+  print("min/max lon = " + min(lon) + "/" + max(lon))
+
+cygnss_test.txt - a file with an indeterminant number of headers that start with "%", followed by a single number containing a row count, followed by that many rows of data with 9 columns each.
+The original version of file had over a million lines of data, and several blocks of headers and data. This sample file only has one block of headers and data. The script below will handle either. To see an example that plots this data, see example #17 on the primitives page.
+
+When reading large blocks of data that are nicely formatted into rows and columns, it is best to use str_split_csv, rather than parsing one line at a time with str_split or str_get_field. str_split_csv requires that each column be separated by a single character delimiter, so str_sub_str is used to replace multiple spaces with just one space.
+
+  lines  = asciiread("cygnss_test.txt",-1,"string")
+  nlines = dimsizes(lines)
+
+  ncols = 9
+  nl    = 0    ; line counter
+  do while(nl.lt.nlines)
+;---Read the first character of this line
+    first = str_get_cols(lines(nl),0,0)
+
+;---If it's a "%", then increment to next line.
+    if(first.eq."%") then
+      nl = nl + 1           ; increment line counter
+      continue
+    else
+;---Otherwise, get the number of rows and read the data.
+      nrows = toint(lines(nl))
+      nl = nl + 1           ; increment line counter
+      print("==================================================")
+      print("Reading " + nrows + " rows of data.")
+;
+; Clean up the strings so there's only one space between
+; each string, and no extra space at beginning or end.
+; This allows us to use str_split_csv to parse this
+; chunk of data. str_split_csv expects a single character
+; delimiter (a space in this case).
+;
+      lines(nl:nl+nrows-1) = str_sub_str(lines(nl:nl+nrows-1),"    "," ")
+      lines(nl:nl+nrows-1) = str_sub_str(lines(nl:nl+nrows-1),"   "," ")
+      lines(nl:nl+nrows-1) = str_sub_str(lines(nl:nl+nrows-1),"  "," ")
+      lines(nl:nl+nrows-1) = str_strip(lines(nl:nl+nrows-1))
+
+;---Parse the data into a 2D integer array
+      x := tofloat(str_split_csv(lines(nl:nl+nrows-1)," ",0))
+      nl = nl + nrows
+
+; . . .Do something here with 'x', like write it to a file. . .
+
+;---Print min/max of each column of data.
+      do i=0,ncols-1
+        print("Column " + (i+1) + " has min/max = " + min(x(:,i)) + \
+               "/" + max(x(:,i)))
+      end do
+    end if
+  end do
+L3_aiavg_n7t_197901.txt - a file with a mix of text, integers, and floats and no delimiters
+This file (ftp://toms.gsfc.nasa.gov/pub/nimbus7/) came from the Nimbus-7/TOMS instrument launched on October 1978. For more information, see the 1README.txt file in the same directory.
+
+This is a complicated file to read given the lack of structure and delimiters. It took a combination of "do" loops and str_get_cols to parse the data.
+
+The L3_read.ncl reads in all the values, and optionally writes them to a NetCDF and/or generates a contour plot.
+
+NCDC.Central_Iowa.1895-2016.txt - a file with a mix of text, integers, and floats and no delimiters. This file was downloaded from the National Centers for Environmental Information (NCEI) which was previously known as the National Climatic Data Center (NCDC). Specifically, this file was downloaded via the Climate data division selection tool.
+The read_NCDC_Central_Iowa.ncl reads in all the values. Specific variables are extracted for clarity..
+
+asc4.txt - a file with some header and footer lines, and a mix of numeric data. The headers contain some numbers, and some of the numeric data contain commas. The columns are separated by tabs.
+See what happens when you read this data using asciiread and the special -1 value:
+
+  data = asciiread("asc4.txt",-1,"float")
+  print(data)
+Notice that the number "15" in the header becomes the first data value read in. The number "2008" from "October 2008" becomes the second value, and so on. Also notice what happens to values with commas, like "1,321". This becomes two separate numbers, "1" and "321".
+In version 5.1.1, we added a suite of string functions that make reading this file much easier. You can use str_sub_str to replace the commas with an empty string, and str_get_field to read the desired fields, using a as the delimiter.
+
+;;load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"; This library is automatically loaded
+                                                             ; from NCL V6.2.0 onward.
+                                                             ; No need for user to explicitly load.
+begin
+;
+; Read population data into an array of strings, removing the
+; first 4 lines and the last 2 lines (header and footer).
+;
+  data = readAsciiTable("asc4.txt",1,"string",(/4,2/))
+
+; Replace commas with an empty string.
+  data = str_sub_str(data,",","")
+
+  country    = str_get_field(data,1,"	")
+  population = stringtointeger(str_get_field(data,2,"	"))
+  percentage = stringtofloat(str_get_field(data,3,"	"))
+
+  print(country + ": population: " + population + " (" + percentage + "%)")
+end
+
+Before V5.1.1, it is not trivial to read this file. You have to first remove the commas, write a new data file, and then you can read this data easily with asciiread. Download the read_asc4.ncl script for an example of how to accomplish this.
+
+asc5.txt - a data file where the first row contains the name of each field separated by a delimiter, and the rest of the file contains the values of each field separated by the same delimiter.
+Download the ascii_delim.ncl script to read in the "asc5.txt" and write it out to a netCDF file, using the field names as variable names on the netCDF file.
+
+The script is rather lengthy; this is because it requires string parsing which is not one of NCL's strong suits. Also, there's a bit of checking involved to allow multiple types to be read in.
+
+In order to write fields to a netCDF file, the netCDF field (variable) names cannot contain any tabs or spaces. Hence this script removes white spaces from the beginning and end of any field names and converts other white space to underscores ('_'). String or character values for the fields themselves are not modified.
+
+Note: it is not generally recommended to read in complex ASCII files with NCL, but this example shows that it can be done.
+
+If you want to use this script for your own purposes, you will need to modify the script to indicate 1) the input ASCII file name, 2) the number of fields, 3) the delimiter, 4) the type of each field, and 5) whether the field contains missing values.
+
+To modify this script for your own data file, first search for the lines:
+
+;============================================================
+; Main code
+;============================================================
+The lines you need to modify follow shortly:
+  filename  = "asc5.txt"                ; ASCII file to read.
+  nfields   = 6                         ; # of fields
+  delimiter = ","                       ; field delimiter
+  var_types      = new(nfields,string)
+  var_msg        = new(nfields,string)
+  var_strlens    = new(nfields,integer)   ; var to hold string lengths,
+                                          ; just in case.
+  .
+  .
+  .
+  var_msg        = ""              ; Default to no missing
+  var_msg(3)     = "-999"          ; Corresponds to field #4
+  var_types      = "integer"       ; Default to integer
+  var_types(1:2) = "float"         ; Second and third fields
+  var_types(4)   = "character"     ; Corresponds to field #5
+Change "var_types" to whatever the types of your fields are, and "var_msg" to what the missing value should be (an empty string indicates no missing value).
+The above code is defaulting all variable types to "integer", and then changing the 2nd and 3rd fields to type "float" and the fifth field to type "character" (which in this case is being used as a character array). The only field that will contain a missing value is the fourth field.
+
+The allowable variable types are "integer", "float", "double", "string", or "character". Note that if you read in a variable as a string, it won't get written to the netCDF file because only character arrays can be written to a netCDF file.
+
+asc6.txt - a data file with a header, and three columns of floating point data (lat, lon, temp).
+The temperature data on this file is dimensioned nlat x nlon (89 x 240), and has a lat,lon value for each data value. The lat and lon data on this file are repetitious. That is, for each of the nlat (89) latitude values, you have the same nlon (240) longitude values. Hence you have 2130 rows of data, but lat and lon values are repeated.
+
+Download the read_asc6.ncl script for an example of how to read this file, discard the repetitious data, and create a variable "temp2D" with one-dimensional latitude and longitude coordinate arrays.
+
+Here's a quick look at the part of the code that reads in the data:
+
+  nlat   =  89
+  nlon   = 240
+  data   = asciiread("asc6.txt",(/nlat*nlon,3/),"float")
+  lat1d  = data(::nlon,0)
+  lon1d  = data(0:nlon-1,1)
+  temp1D = data(:,2)                      ; 1st create a 1d array
+  temp2D = onedtond(temp1D,(/nlat,nlon/)) ; convert 1D array to a 2D array
+How to read multiple ASCII files into one variable in NCL. This example assumes the files contain the same number of columns, but not necessarily the same number of rows.
+    dasc = "./"         ; input directory for ascii files
+    fasc = "2009*asc"   ; a unique identifier for files
+  ;;fasc = "*asc"
+
+    DASC = "./"         ; output dir
+    FASC = "BIG.asc"    ; output file name
+
+    system ("/bin/rm -f "+DASC+FASC)   ; rm any pre-existing file
+
+; Use UNIX "cat" to concatenate the files into one file.
+    system ("cd "+ dasc+" ; cat "+fasc+" > "+DASC+FASC)
+
+; You can now read the file via "asciiread".
+    nrows = numAsciiRow(DASC+FASC)   ; contributed.ncl
+    ncols = numAsciiCol(DASC+FASC)
+    data  = asciiread(DASC+FASC,(/nrows,ncols/),"float")
+    print(data)
+
+  ;;system ("/bin/rm "+DASC+FASC)   ; rm the created file
+
+How to read a very large (thousands of lines) ASCII file of numeric data that contains header and/or footer lines.
+Ideally, you would use readAsciiTable to read the data, stripping off the undesired headder and/or footer lines. However, this function can be very slow, as it has to read the data in as an array of strings (possibly multiple times) in order to parse it correctly.
+
+The fastest way to read in numeric data is to use asciiread. Since this function reads in every single value in a file, this means that any numbers that are in your header or footer lines will get read in as real values.
+
+
+
+Contact the Webmaster
